@@ -105,6 +105,7 @@ const skillGroups = [
 					<a href="#about">About</a>
 					<a href="#experience">Experience</a>
 					<a href="#education">Education</a>
+					<a href="#quantum-project">Quantum project</a>
 					<a href="#skills">Skills</a>
 				</nav>
 
@@ -134,25 +135,56 @@ const skillGroups = [
 							>
 								LinkedIn profile <span aria-hidden="true">↗</span>
 							</a>
+							<details class="cv-download">
+								<summary class="button button--outline">
+									Download CV <span class="cv-download__chevron" aria-hidden="true">↓</span>
+								</summary>
+								<ul class="cv-download__menu" aria-label="Choose a CV language">
+									<li>
+										<a href="/english_cv.pdf" download="Oriol-Martin-Olive-CV-English.pdf">
+											<span>English</span><span class="cv-download__format">PDF ↓</span>
+										</a>
+									</li>
+									<li>
+										<a href="/spanish_cv.pdf" download="Oriol-Martin-Olive-CV-Spanish.pdf">
+											<span>Spanish</span><span class="cv-download__format">PDF ↓</span>
+										</a>
+									</li>
+									<li>
+										<a href="/catalan_cv.pdf" download="Oriol-Martin-Olive-CV-Catalan.pdf">
+											<span>Catalan</span><span class="cv-download__format">PDF ↓</span>
+										</a>
+									</li>
+								</ul>
+							</details>
 						</div>
 					</div>
 
-					<aside class="hero-card" aria-label="Professional profile at a glance">
+					<aside class="hero-card" aria-label="Portrait and professional highlights">
+						<img
+							class="hero-card__portrait"
+							src="/profile_photo.jpg"
+							alt="Portrait of Oriol Martín Olivé"
+							fetchpriority="high"
+							decoding="async"
+						/>
 						<div class="hero-card__topline">
 							<span>At a glance</span>
 							<span>Barcelona · ES</span>
 						</div>
-						<div class="hero-card__stat-block">
-							<p class="hero-card__stat">4<span> years</span></p>
-							<p class="hero-card__caption">building production software</p>
-						</div>
-						<div class="hero-card__focus">
-							<p class="hero-card__label">Areas of focus</p>
-							<ul>
-								<li><span>01</span> Applied AI &amp; RAG</li>
-								<li><span>02</span> Full-stack products</li>
-								<li><span>03</span> Security &amp; quantum technology</li>
-							</ul>
+						<div class="hero-card__details">
+							<div class="hero-card__stat-block">
+								<p class="hero-card__stat">4<span> years</span></p>
+								<p class="hero-card__caption">building production software</p>
+							</div>
+							<div class="hero-card__focus">
+								<p class="hero-card__label">Areas of focus</p>
+								<ul>
+									<li><span>01</span> Applied AI &amp; RAG</li>
+									<li><span>02</span> Full-stack products</li>
+									<li><span>03</span> Security &amp; quantum technology</li>
+								</ul>
+							</div>
 						</div>
 					</aside>
 				</section>
@@ -218,9 +250,79 @@ const skillGroups = [
 					</div>
 				</section>
 
+				<section class="section quantum-section" id="quantum-project" aria-labelledby="quantum-title">
+					<div class="section-heading">
+						<p class="section-kicker"><span>03</span> / Quantum Engineering</p>
+						<div class="section-heading__copy">
+							<h2 id="quantum-title">My postgraduate capstone project.</h2>
+							<p>
+								I completed a postgraduate program in Quantum Engineering at UPC School (2025–2026); this dashboard was my final project.
+							</p>
+						</div>
+					</div>
+
+					<article class="quantum-project" aria-labelledby="quantum-project-title">
+						<div class="quantum-project__main">
+							<div class="quantum-project__eyebrow">
+								<span>Postgraduate final project</span>
+								<span>2025 — 2026</span>
+							</div>
+							<h3 id="quantum-project-title">Classic-Quantum <span>Verifier Dashboard</span></h3>
+							<p>
+								An interactive dashboard for exploring and running the one-qubit quantum verification protocol described in “Towards experimental classical verification of quantum computation” by Roman Stricker et al. (2024).
+							</p>
+							<p>
+								Users can prepare a parameterized clock state, measure its Hamiltonian energy, and see in real time whether the verifier accepts or rejects the prover. The protocol lets a classical verifier test for genuine quantum behavior without simulating the full computation.
+							</p>
+							<a
+								class="button button--primary quantum-project__link"
+								href="https://github.com/feymery/classic-quantum-verifier-dashboard"
+								target="_blank"
+								rel="noreferrer"
+							>
+								View project on GitHub <span aria-hidden="true">↗</span>
+							</a>
+						</div>
+
+						<aside class="quantum-project__sidebar" aria-label="Project overview">
+							<div>
+								<p class="quantum-project__label">Protocol flow</p>
+								<ol class="quantum-project__steps">
+									<li>
+										<span>01</span>
+										<p><strong>Prepare</strong> a parameterized clock state.</p>
+									</li>
+									<li>
+										<span>02</span>
+										<p><strong>Measure</strong> the Hamiltonian energy.</p>
+									</li>
+									<li>
+										<span>03</span>
+										<p><strong>Verify</strong> the prover against the threshold.</p>
+									</li>
+								</ol>
+							</div>
+
+							<div class="quantum-project__stack">
+								<p class="quantum-project__label">Technology</p>
+								<ul>
+									<li>React 19</li>
+									<li>TypeScript</li>
+									<li>Vite</li>
+									<li>Tailwind CSS v4</li>
+									<li>FastAPI</li>
+									<li>Qiskit Aer · local</li>
+									<li>IBM Quantum Runtime · optional</li>
+									<li>Recharts</li>
+								</ul>
+							</div>
+						</aside>
+					</article>
+				</section>
+
 				<section class="section skills-section" id="skills" aria-labelledby="skills-title">
 					<div class="section-heading">
-						<p class="section-kicker"><span>03</span> / Skills</p>
+						<p class="section-kicker"><span>04</span> / Skills</p>
 						<div class="section-heading__copy">
 							<h2 id="skills-title">Tools for thoughtful engineering.</h2>
 							<p>Technologies, practices, and languages I bring to product development.</p>
@@ -244,7 +346,7 @@ const skillGroups = [
 
 				<section class="contact-panel" id="contact" aria-labelledby="contact-title">
 					<div class="contact-panel__copy">
-						<p class="section-kicker section-kicker--light"><span>04</span> / Contact</p>
+						<p class="section-kicker section-kicker--light"><span>05</span> / Contact</p>
 						<h2 id="contact-title">Let’s build something meaningful.</h2>
 						<p>Have an interesting engineering challenge? I’d be glad to hear about it.</p>
 					</div>
@@ -510,12 +612,73 @@ const skillGroups = [
 		color: var(--color-bg);
 	}
 
+	.cv-download {
+		position: relative;
+	}
+
+	.cv-download > summary {
+		cursor: pointer;
+		list-style: none;
+	}
+
+	.cv-download > summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.cv-download__chevron {
+		display: inline-block;
+		transition: transform 180ms ease;
+	}
+
+	.cv-download[open] .cv-download__chevron {
+		transform: rotate(180deg);
+	}
+
+	.cv-download__menu {
+		position: absolute;
+		z-index: 5;
+		top: calc(100% + 0.55rem);
+		left: 0;
+		width: min(260px, calc(100vw - 2rem));
+		margin: 0;
+		padding: 0.35rem;
+		border: 1px solid var(--color-border);
+		border-radius: 6px;
+		background: var(--color-bg);
+		box-shadow: 0 12px 30px rgba(36, 95, 115, 0.12);
+		list-style: none;
+	}
+
+	.cv-download__menu a {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		padding: 0.7rem 0.75rem;
+		border-radius: 4px;
+		color: var(--color-accent);
+		font-size: 0.77rem;
+		font-weight: 650;
+		text-decoration: none;
+		transition: background-color 160ms ease;
+	}
+
+	.cv-download__menu a:hover {
+		background: rgba(115, 62, 36, 0.08);
+	}
+
+	.cv-download__format {
+		font-family: var(--font-mono);
+		font-size: 0.59rem;
+		letter-spacing: 0.04em;
+		opacity: 0.78;
+	}
+
 	.hero-card {
 		position: relative;
 		display: flex;
-		min-height: 430px;
+		min-height: 460px;
 		flex-direction: column;
-		justify-content: space-between;
 		overflow: hidden;
 		padding: clamp(1.5rem, 3.4vw, 2.2rem);
 		border: 1px solid var(--color-primary);
@@ -524,57 +687,74 @@ const skillGroups = [
 		color: var(--color-bg);
 	}
 
-	.hero-card::before,
-	.hero-card::after {
+	.hero-card__portrait {
 		position: absolute;
 		z-index: 0;
-		border: 1px solid rgba(242, 240, 239, 0.17);
-		border-radius: 50%;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center 18%;
+	}
+
+	.hero-card::before {
+		position: absolute;
+		z-index: 1;
+		inset: 0;
+		background: linear-gradient(
+			180deg,
+			rgba(36, 95, 115, 0.1) 0%,
+			rgba(36, 95, 115, 0.14) 28%,
+			rgba(36, 95, 115, 0.84) 48%,
+			var(--color-primary) 72%
+		);
 		content: '';
 		pointer-events: none;
 	}
 
-	.hero-card::before {
-		top: -170px;
-		right: -180px;
-		width: 390px;
-		aspect-ratio: 1;
-	}
-
 	.hero-card::after {
-		top: -105px;
-		right: -115px;
-		width: 260px;
-		aspect-ratio: 1;
+		position: absolute;
+		z-index: 2;
+		inset: 0.75rem;
+		border: 1px solid rgba(242, 240, 239, 0.42);
+		border-radius: 2px;
+		content: '';
+		pointer-events: none;
 	}
 
 	.hero-card__topline,
-	.hero-card__stat-block,
-	.hero-card__focus {
+	.hero-card__details {
 		position: relative;
-		z-index: 1;
+		z-index: 3;
 	}
 
 	.hero-card__topline {
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
 		gap: 1rem;
-		padding-bottom: 1rem;
-		border-bottom: 1px solid rgba(242, 240, 239, 0.36);
+		padding: 0.55rem 0.7rem;
+		border: 1px solid rgba(242, 240, 239, 0.38);
+		border-radius: 3px;
+		background: rgba(36, 95, 115, 0.9);
 		font-family: var(--font-mono);
 		font-size: 0.59rem;
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 	}
 
+	.hero-card__details {
+		margin-top: auto;
+	}
+
 	.hero-card__stat-block {
-		margin: 2.1rem 0;
+		margin: 0 0 1rem;
 	}
 
 	.hero-card__stat {
 		margin: 0;
 		font-family: var(--font-display);
-		font-size: clamp(5.2rem, 8vw, 7rem);
+		font-size: clamp(4.6rem, 7vw, 6rem);
 		letter-spacing: -0.1em;
 		line-height: 0.9;
 	}
@@ -587,14 +767,14 @@ const skillGroups = [
 	}
 
 	.hero-card__caption {
-		margin: 0.7rem 0 0;
+		margin: 0.45rem 0 0;
 		font-size: 0.83rem;
-		opacity: 0.84;
+		opacity: 0.92;
 	}
 
 	.hero-card__focus {
-		padding-top: 1.1rem;
-		border-top: 1px solid rgba(242, 240, 239, 0.36);
+		padding-top: 0.9rem;
+		border-top: 1px solid rgba(242, 240, 239, 0.5);
 	}
 
 	.hero-card__label {
@@ -603,7 +783,7 @@ const skillGroups = [
 		font-size: 0.59rem;
 		letter-spacing: 0.11em;
 		text-transform: uppercase;
-		opacity: 0.75;
+		opacity: 0.9;
 	}
 
 	.hero-card__focus ul {
@@ -827,6 +1007,149 @@ const skillGroups = [
 		font-style: italic;
 	}
 
+	.quantum-project {
+		display: grid;
+		grid-template-columns: minmax(0, 1.4fr) minmax(250px, 0.75fr);
+		overflow: hidden;
+		border: 1px solid var(--color-primary);
+		border-radius: 5px;
+		background: var(--color-primary);
+		color: var(--color-bg);
+	}
+
+	.quantum-project__main {
+		padding: clamp(1.5rem, 4vw, 3.25rem);
+	}
+
+	.quantum-project__eyebrow {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 0.5rem 1rem;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid rgba(242, 240, 239, 0.4);
+		font-family: var(--font-mono);
+		font-size: 0.6rem;
+		letter-spacing: 0.09em;
+		line-height: 1.5;
+		text-transform: uppercase;
+		opacity: 0.84;
+	}
+
+	.quantum-project__main h3 {
+		max-width: 18ch;
+		margin: 1.8rem 0 1.15rem;
+		font-family: var(--font-display);
+		font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+		font-weight: 400;
+		letter-spacing: -0.065em;
+		line-height: 1.02;
+	}
+
+	.quantum-project__main h3 span {
+		display: block;
+		font-style: italic;
+	}
+
+	.quantum-project__main > p {
+		max-width: 65ch;
+		margin: 0.75rem 0;
+		font-size: 0.86rem;
+		line-height: 1.8;
+		opacity: 0.9;
+	}
+
+	.quantum-project__link {
+		margin-top: 1rem;
+	}
+
+	.quantum-project__link:hover {
+		background: var(--color-bg);
+		color: var(--color-primary);
+	}
+
+	.quantum-project__sidebar {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 2rem;
+		padding: clamp(1.5rem, 3vw, 2.4rem);
+		border-left: 1px solid rgba(242, 240, 239, 0.4);
+		background: rgba(242, 240, 239, 0.04);
+	}
+
+	.quantum-project__label {
+		margin: 0 0 1rem;
+		font-family: var(--font-mono);
+		font-size: 0.6rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		opacity: 0.78;
+	}
+
+	.quantum-project__steps,
+	.quantum-project__stack ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.quantum-project__steps {
+		display: grid;
+		gap: 0.9rem;
+	}
+
+	.quantum-project__steps li {
+		display: grid;
+		grid-template-columns: 25px minmax(0, 1fr);
+		align-items: start;
+		gap: 0.7rem;
+	}
+
+	.quantum-project__steps li > span {
+		display: grid;
+		width: 24px;
+		aspect-ratio: 1;
+		place-items: center;
+		border: 1px solid rgba(242, 240, 239, 0.48);
+		border-radius: 50%;
+		font-family: var(--font-mono);
+		font-size: 0.55rem;
+	}
+
+	.quantum-project__steps p {
+		margin: 0;
+		font-size: 0.76rem;
+		line-height: 1.6;
+		opacity: 0.86;
+	}
+
+	.quantum-project__steps strong {
+		color: var(--color-bg);
+		font-weight: 700;
+		opacity: 1;
+	}
+
+	.quantum-project__stack {
+		margin-top: 2rem;
+		padding-top: 1.2rem;
+		border-top: 1px solid rgba(242, 240, 239, 0.4);
+	}
+
+	.quantum-project__stack ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.42rem;
+	}
+
+	.quantum-project__stack li {
+		padding: 0.28rem 0.5rem;
+		border: 1px solid rgba(242, 240, 239, 0.42);
+		border-radius: 999px;
+		font-size: 0.64rem;
+		line-height: 1.4;
+	}
+
 	.skills-grid {
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1005,7 +1328,8 @@ const skillGroups = [
 		}
 
 		.hero-card {
-			min-height: 390px;
+			height: clamp(440px, 95vw, 540px);
+			min-height: 0;
 		}
 
 		.section-heading {
@@ -1046,6 +1370,23 @@ const skillGroups = [
 
 		.education-card {
 			min-height: 225px;
+		}
+
+		.quantum-project {
+			grid-template-columns: 1fr;
+		}
+
+		.quantum-project__sidebar {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			align-content: start;
+			gap: 1.5rem;
+			border-top: 1px solid rgba(242, 240, 239, 0.4);
+			border-left: 0;
+		}
+
+		.quantum-project__stack {
+			margin-top: 0;
 		}
 
 		.skills-grid {
@@ -1125,8 +1466,31 @@ const skillGroups = [
 			justify-content: space-between;
 		}
 
+		.cv-download {
+			flex: 1 1 100%;
+		}
+
+		.cv-download > summary {
+			width: 100%;
+			justify-content: space-between;
+		}
+
 		.hero-card {
-			min-height: 370px;
+			height: clamp(440px, 95vw, 500px);
+			min-height: 0;
+		}
+
+		.quantum-project__main {
+			padding: 1.4rem;
+		}
+
+		.quantum-project__main h3 {
+			font-size: clamp(2.1rem, 10vw, 3rem);
+		}
+
+		.quantum-project__sidebar {
+			grid-template-columns: 1fr;
+			padding: 1.4rem;
 		}
 
 		.experience-item__highlights li {
