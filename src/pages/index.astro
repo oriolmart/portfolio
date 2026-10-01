@@ -1,11 +1,1158 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const experiences = [
+	{
+		number: '01',
+		role: 'Software Full-Stack Developer',
+		company: 'Boosting Analytics',
+		dates: 'Sep 2024 — Oct 2025',
+		focus: ['RAG', 'LLM integrations', 'HubSpot & LinkedIn'],
+		highlights: [
+			'Engineered a production RAG system for semantic search across 1,000+ industrial datasheets, significantly reducing document retrieval time.',
+			'Built a full-stack HubSpot and LinkedIn integration with LLM-powered messaging, automating lead report generation and increasing sales outreach efficiency.',
+		],
+	},
+	{
+		number: '02',
+		role: 'Software Frontend Developer',
+		company: 'Entrust',
+		dates: 'Jul 2023 — Jul 2024',
+		focus: ['React', 'Certificate Transparency', 'SSL/TLS'],
+		highlights: [
+			'Architected a React single-page application to visualize and analyze high-volume Certificate Transparency (CT) logs, delivering an automated monitoring tool for the security team to audit domain SSL/TLS certificates.',
+		],
+	},
+	{
+		number: '03',
+		role: 'Software Engineering Intern',
+		company: 'Entrust',
+		dates: 'Sep 2022 — Jul 2023',
+		focus: ['React Native', 'Self-Sovereign Identity', 'Digital identity'],
+		highlights: [
+			'Developed a React Native mobile wallet proof of concept integrating Self-Sovereign Identity (SSI) concepts with an IDaaS platform for decentralized digital certificate issuance.',
+		],
+	},
+];
+
+const education = [
+	{
+		level: 'POSTGRADUATE',
+		degree: 'Postgraduate in Quantum Engineering',
+		institution: 'UPC School',
+		dates: 'Oct 2025 — Jun 2026',
+		note: '',
+	},
+	{
+		level: "BACHELOR'S DEGREE",
+		degree: "Bachelor's Degree in Informatics Engineering",
+		institution: 'UPC — Barcelona School of Informatics (FIB)',
+		dates: 'Sep 2018 — Jun 2022',
+		note: 'Major in Software Engineering',
+	},
+];
+
+const skillGroups = [
+	{
+		number: '01',
+		title: 'Generative AI & LLMs',
+		items: ['RAG', 'Prompt Engineering', 'LangChain', 'LlamaIndex', 'OpenAI API', 'Gemini Grounding Search'],
+	},
+	{
+		number: '02',
+		title: 'Languages & Backend',
+		items: ['Python', 'TypeScript', 'JavaScript (ES6+)', 'Go', 'C#', 'Docker', 'CI/CD', 'Git', 'PostgreSQL', 'MongoDB'],
+	},
+	{
+		number: '03',
+		title: 'Frontend & Mobile',
+		items: ['React.js', 'React Native', 'Tailwind CSS', 'shadcn/ui', 'Material UI', 'HTML5', 'CSS3'],
+	},
+	{
+		number: '04',
+		title: 'Ways of working',
+		items: ['Agile (Scrum)', 'Clean Code', 'Design Patterns'],
+	},
+	{
+		number: '05',
+		title: 'Languages',
+		items: ['Spanish — Native', 'Catalan — Native', 'English — Fluent'],
+	},
+	{
+		number: '06',
+		title: 'Quantum Technology',
+		items: ['Post-Quantum Cryptography (PQC)', 'QKD', 'Qiskit', 'Quantum Circuit Design'],
+	},
+];
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+	title="Oriol Martín Olivé — Software Engineer"
+	description="Software Engineer in Barcelona with four years of experience building scalable web applications and production-grade Generative AI systems."
+>
+	<div class="portfolio-shell" id="top">
+		<div class="container">
+			<header class="site-header">
+				<a class="identity" href="#top" aria-label="Oriol Martín Olivé — home">
+					<span class="identity__mark" aria-hidden="true">OM</span>
+					<span class="identity__text">
+						<span class="identity__name">Oriol Martín Olivé</span>
+						<span class="identity__role">Software Engineer</span>
+					</span>
+				</a>
+
+				<nav class="primary-nav" aria-label="Main navigation">
+					<a href="#about">About</a>
+					<a href="#experience">Experience</a>
+					<a href="#education">Education</a>
+					<a href="#skills">Skills</a>
+				</nav>
+
+				<a class="header-contact" href="mailto:martin.oriol.olive@gmail.com">
+					Contact <span aria-hidden="true">↗</span>
+				</a>
+			</header>
+
+			<main id="main">
+				<section class="hero" id="about" aria-labelledby="hero-title">
+					<div class="hero__copy">
+						<p class="eyebrow">Software Engineer <span aria-hidden="true">/</span> Barcelona, Spain</p>
+						<h1 id="hero-title">Oriol Martín <span>Olivé</span></h1>
+						<p class="hero__statement">Turning complex engineering challenges into reliable software.</p>
+						<p class="hero__summary">
+							Software Engineer with four years of experience building scalable web applications and production-grade Generative AI (RAG) systems. I combine a strong foundation in software and quantum engineering from UPC with hands-on delivery across modern React/TypeScript ecosystems and Python backends. Grounded in algorithmic problem-solving, clean architecture, and well-founded design patterns, I build resilient, high-performance production software.
+						</p>
+						<div class="hero__actions">
+							<a class="button button--primary" href="mailto:martin.oriol.olive@gmail.com">
+								Contact me <span aria-hidden="true">↗</span>
+							</a>
+							<a
+								class="button button--outline"
+								href="https://www.linkedin.com/in/oriol-martin-olive/"
+								target="_blank"
+								rel="noreferrer"
+							>
+								LinkedIn profile <span aria-hidden="true">↗</span>
+							</a>
+						</div>
+					</div>
+
+					<aside class="hero-card" aria-label="Professional profile at a glance">
+						<div class="hero-card__topline">
+							<span>At a glance</span>
+							<span>Barcelona · ES</span>
+						</div>
+						<div class="hero-card__stat-block">
+							<p class="hero-card__stat">4<span> years</span></p>
+							<p class="hero-card__caption">building production software</p>
+						</div>
+						<div class="hero-card__focus">
+							<p class="hero-card__label">Areas of focus</p>
+							<ul>
+								<li><span>01</span> Applied AI &amp; RAG</li>
+								<li><span>02</span> Full-stack products</li>
+								<li><span>03</span> Security &amp; quantum technology</li>
+							</ul>
+						</div>
+					</aside>
+				</section>
+
+				<section class="section experience-section" id="experience" aria-labelledby="experience-title">
+					<div class="section-heading">
+						<p class="section-kicker"><span>01</span> / Experience</p>
+						<div class="section-heading__copy">
+							<h2 id="experience-title">Built for the real world.</h2>
+							<p>
+								Production-oriented work across applied AI, security tooling, and digital identity.
+							</p>
+						</div>
+					</div>
+
+					<div class="experience-list">
+						{experiences.map((experience) => (
+							<article class="experience-item">
+								<p class="experience-item__number">{experience.number}</p>
+								<p class="experience-item__dates">{experience.dates}</p>
+								<div class="experience-item__content">
+									<div class="experience-item__heading">
+										<h3>{experience.role}</h3>
+										<p>{experience.company}</p>
+									</div>
+									<ul class="experience-item__highlights">
+										{experience.highlights.map((highlight) => <li>{highlight}</li>)}
+									</ul>
+									<ul class="focus-tags" aria-label="Areas of focus">
+										{experience.focus.map((item) => <li>{item}</li>)}
+									</ul>
+								</div>
+							</article>
+						))}
+					</div>
+				</section>
+
+				<section class="section education-section" id="education" aria-labelledby="education-title">
+					<div class="section-heading">
+						<p class="section-kicker"><span>02</span> / Education</p>
+						<div class="section-heading__copy">
+							<h2 id="education-title">A foundation in software and quantum engineering.</h2>
+							<p>Academic training at UPC, from software engineering to quantum technologies.</p>
+						</div>
+					</div>
+
+					<div class="education-grid">
+						{education.map((item, index) => (
+							<article
+								class:list={['education-card', { 'education-card--featured': index === 0 }]}
+							>
+								<div class="education-card__meta">
+									<span>{item.level}</span>
+									<span>{item.dates}</span>
+								</div>
+								<h3>{item.degree}</h3>
+								<div class="education-card__details">
+									<p>{item.institution}</p>
+									{item.note && <p class="education-card__note">{item.note}</p>}
+								</div>
+							</article>
+						))}
+					</div>
+				</section>
+
+				<section class="section skills-section" id="skills" aria-labelledby="skills-title">
+					<div class="section-heading">
+						<p class="section-kicker"><span>03</span> / Skills</p>
+						<div class="section-heading__copy">
+							<h2 id="skills-title">Tools for thoughtful engineering.</h2>
+							<p>Technologies, practices, and languages I bring to product development.</p>
+						</div>
+					</div>
+
+					<div class="skills-grid">
+						{skillGroups.map((group) => (
+							<article class="skill-group">
+								<div class="skill-group__heading">
+									<span>{group.number}</span>
+									<h3>{group.title}</h3>
+								</div>
+								<ul class="skill-list">
+									{group.items.map((item) => <li>{item}</li>)}
+								</ul>
+							</article>
+						))}
+					</div>
+				</section>
+
+				<section class="contact-panel" id="contact" aria-labelledby="contact-title">
+					<div class="contact-panel__copy">
+						<p class="section-kicker section-kicker--light"><span>04</span> / Contact</p>
+						<h2 id="contact-title">Let’s build something meaningful.</h2>
+						<p>Have an interesting engineering challenge? I’d be glad to hear about it.</p>
+					</div>
+					<div class="contact-panel__links">
+						<a class="button button--primary" href="mailto:martin.oriol.olive@gmail.com">
+							Email Oriol <span aria-hidden="true">↗</span>
+						</a>
+						<a href="tel:+34693935696">+34 693 935 696</a>
+						<a
+							href="https://www.linkedin.com/in/oriol-martin-olive/"
+							target="_blank"
+							rel="noreferrer"
+						>
+							LinkedIn profile <span aria-hidden="true">↗</span>
+						</a>
+					</div>
+				</section>
+			</main>
+
+			<footer class="site-footer">
+				<p>© {new Date().getFullYear()} Oriol Martín Olivé</p>
+				<p>Designed and built with care in Barcelona.</p>
+				<a href="#top">Back to top ↑</a>
+			</footer>
+		</div>
+	</div>
 </Layout>
+
+<style>
+	.portfolio-shell {
+		min-height: 100vh;
+		overflow: clip;
+	}
+
+	.container {
+		width: min(1160px, calc(100% - 64px));
+		margin-inline: auto;
+	}
+
+	.site-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+		padding: 1.25rem 0;
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.identity {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.8rem;
+		flex-shrink: 0;
+		color: var(--color-primary);
+		text-decoration: none;
+	}
+
+	.identity__mark {
+		display: grid;
+		width: 42px;
+		aspect-ratio: 1;
+		place-items: center;
+		border: 1px solid var(--color-primary);
+		border-radius: 50%;
+		font-family: var(--font-display);
+		font-size: 0.92rem;
+		font-weight: 700;
+		letter-spacing: -0.09em;
+	}
+
+	.identity__text,
+	.identity__name,
+	.identity__role {
+		display: block;
+	}
+
+	.identity__name {
+		font-size: 0.87rem;
+		font-weight: 700;
+		letter-spacing: -0.015em;
+	}
+
+	.identity__role {
+		margin-top: 0.1rem;
+		font-family: var(--font-mono);
+		font-size: 0.59rem;
+		letter-spacing: 0.09em;
+		text-transform: uppercase;
+		opacity: 0.76;
+	}
+
+	.primary-nav {
+		display: flex;
+		align-items: center;
+		gap: clamp(1rem, 2.3vw, 2rem);
+	}
+
+	.primary-nav a {
+		position: relative;
+		color: var(--color-accent);
+		font-size: 0.77rem;
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.primary-nav a::after {
+		position: absolute;
+		right: 0;
+		bottom: -0.35rem;
+		left: 0;
+		height: 1px;
+		background: currentColor;
+		content: '';
+		transform: scaleX(0);
+		transform-origin: right;
+		transition: transform 180ms ease;
+	}
+
+	.primary-nav a:hover::after {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+
+	.header-contact {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.55rem;
+		flex-shrink: 0;
+		padding: 0.62rem 0.95rem;
+		border: 1px solid var(--color-accent);
+		border-radius: 999px;
+		background: var(--color-accent);
+		color: var(--color-bg);
+		font-size: 0.75rem;
+		font-weight: 700;
+		text-decoration: none;
+		transition:
+			background-color 180ms ease,
+			color 180ms ease,
+			transform 180ms ease;
+	}
+
+	.header-contact:hover {
+		transform: translateY(-2px);
+		background: transparent;
+		color: var(--color-accent);
+	}
+
+	.hero {
+		display: grid;
+		grid-template-columns: minmax(0, 1.5fr) minmax(285px, 0.78fr);
+		align-items: center;
+		gap: clamp(3rem, 7vw, 6.5rem);
+		padding: clamp(5.25rem, 10vw, 8rem) 0 clamp(4rem, 8vw, 6.75rem);
+	}
+
+	.eyebrow,
+	.section-kicker {
+		margin: 0;
+		font-family: var(--font-mono);
+		font-size: 0.68rem;
+		font-weight: 600;
+		letter-spacing: 0.09em;
+		line-height: 1.5;
+		text-transform: uppercase;
+	}
+
+	.eyebrow {
+		display: flex;
+		align-items: center;
+		gap: 0.65rem;
+		margin-bottom: 1.4rem;
+		opacity: 0.82;
+	}
+
+	.eyebrow::before {
+		width: 28px;
+		height: 1px;
+		background: var(--color-primary);
+		content: '';
+	}
+
+	.hero h1 {
+		max-width: 9ch;
+		margin: 0;
+		font-family: var(--font-display);
+		font-size: clamp(4rem, 7.7vw, 6.9rem);
+		font-weight: 400;
+		letter-spacing: -0.075em;
+		line-height: 0.94;
+	}
+
+	.hero h1 span {
+		display: block;
+		font-style: italic;
+	}
+
+	.hero__statement {
+		max-width: 34ch;
+		margin: 1.6rem 0 0.8rem;
+		font-size: clamp(1.18rem, 2vw, 1.45rem);
+		font-weight: 600;
+		letter-spacing: -0.025em;
+		line-height: 1.35;
+	}
+
+	.hero__summary {
+		max-width: 65ch;
+		margin: 0;
+		font-size: 0.91rem;
+		line-height: 1.85;
+		opacity: 0.88;
+	}
+
+	.hero__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 1.8rem;
+	}
+
+	.button {
+		display: inline-flex;
+		min-height: 46px;
+		align-items: center;
+		justify-content: center;
+		gap: 0.8rem;
+		padding: 0.72rem 1.05rem;
+		border: 1px solid var(--color-accent);
+		border-radius: 999px;
+		font-size: 0.77rem;
+		font-weight: 700;
+		text-decoration: none;
+		transition:
+			background-color 180ms ease,
+			color 180ms ease,
+			transform 180ms ease,
+			box-shadow 180ms ease;
+	}
+
+	.button:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 7px 18px rgba(36, 95, 115, 0.13);
+	}
+
+	.button--primary {
+		background: var(--color-accent);
+		color: var(--color-bg);
+	}
+
+	.button--primary:hover {
+		background: transparent;
+		color: var(--color-accent);
+	}
+
+	.button--outline {
+		background: transparent;
+		color: var(--color-accent);
+	}
+
+	.button--outline:hover {
+		background: var(--color-accent);
+		color: var(--color-bg);
+	}
+
+	.hero-card {
+		position: relative;
+		display: flex;
+		min-height: 430px;
+		flex-direction: column;
+		justify-content: space-between;
+		overflow: hidden;
+		padding: clamp(1.5rem, 3.4vw, 2.2rem);
+		border: 1px solid var(--color-primary);
+		border-radius: 5px;
+		background: var(--color-primary);
+		color: var(--color-bg);
+	}
+
+	.hero-card::before,
+	.hero-card::after {
+		position: absolute;
+		z-index: 0;
+		border: 1px solid rgba(242, 240, 239, 0.17);
+		border-radius: 50%;
+		content: '';
+		pointer-events: none;
+	}
+
+	.hero-card::before {
+		top: -170px;
+		right: -180px;
+		width: 390px;
+		aspect-ratio: 1;
+	}
+
+	.hero-card::after {
+		top: -105px;
+		right: -115px;
+		width: 260px;
+		aspect-ratio: 1;
+	}
+
+	.hero-card__topline,
+	.hero-card__stat-block,
+	.hero-card__focus {
+		position: relative;
+		z-index: 1;
+	}
+
+	.hero-card__topline {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid rgba(242, 240, 239, 0.36);
+		font-family: var(--font-mono);
+		font-size: 0.59rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+
+	.hero-card__stat-block {
+		margin: 2.1rem 0;
+	}
+
+	.hero-card__stat {
+		margin: 0;
+		font-family: var(--font-display);
+		font-size: clamp(5.2rem, 8vw, 7rem);
+		letter-spacing: -0.1em;
+		line-height: 0.9;
+	}
+
+	.hero-card__stat span {
+		font-family: var(--font-body);
+		font-size: 1rem;
+		font-weight: 500;
+		letter-spacing: 0;
+	}
+
+	.hero-card__caption {
+		margin: 0.7rem 0 0;
+		font-size: 0.83rem;
+		opacity: 0.84;
+	}
+
+	.hero-card__focus {
+		padding-top: 1.1rem;
+		border-top: 1px solid rgba(242, 240, 239, 0.36);
+	}
+
+	.hero-card__label {
+		margin: 0 0 0.7rem;
+		font-family: var(--font-mono);
+		font-size: 0.59rem;
+		letter-spacing: 0.11em;
+		text-transform: uppercase;
+		opacity: 0.75;
+	}
+
+	.hero-card__focus ul {
+		display: grid;
+		gap: 0.42rem;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.hero-card__focus li {
+		display: flex;
+		gap: 0.75rem;
+		font-size: 0.78rem;
+	}
+
+	.hero-card__focus li span {
+		font-family: var(--font-mono);
+		font-size: 0.63rem;
+		opacity: 0.65;
+	}
+
+	.section {
+		padding: clamp(4.5rem, 8vw, 7rem) 0;
+		border-top: 1px solid var(--color-border);
+	}
+
+	.section-heading {
+		display: grid;
+		grid-template-columns: minmax(145px, 0.5fr) minmax(0, 1.6fr);
+		gap: 2.5rem;
+		margin-bottom: 3rem;
+	}
+
+	.section-kicker {
+		padding-top: 0.45rem;
+		opacity: 0.82;
+	}
+
+	.section-kicker span {
+		margin-right: 0.35rem;
+		opacity: 0.72;
+	}
+
+	.section-heading__copy h2,
+	.contact-panel h2 {
+		max-width: 18ch;
+		margin: 0;
+		font-family: var(--font-display);
+		font-size: clamp(2.45rem, 4.7vw, 4.1rem);
+		font-weight: 400;
+		letter-spacing: -0.06em;
+		line-height: 1.04;
+	}
+
+	.section-heading__copy > p {
+		max-width: 56ch;
+		margin: 1rem 0 0;
+		font-size: 0.9rem;
+		opacity: 0.82;
+	}
+
+	.experience-list {
+		border-top: 1px solid var(--color-border);
+	}
+
+	.experience-item {
+		display: grid;
+		grid-template-columns: 34px minmax(145px, 0.48fr) minmax(0, 1.75fr);
+		gap: 1.25rem;
+		padding: 2rem 0 2.2rem;
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.experience-item__number,
+	.experience-item__dates {
+		margin: 0;
+		font-family: var(--font-mono);
+		font-size: 0.67rem;
+		line-height: 1.65;
+	}
+
+	.experience-item__number {
+		opacity: 0.68;
+	}
+
+	.experience-item__dates {
+		max-width: 14ch;
+		opacity: 0.78;
+	}
+
+	.experience-item__content {
+		max-width: 760px;
+	}
+
+	.experience-item__heading h3 {
+		margin: 0;
+		font-size: clamp(1.08rem, 1.7vw, 1.35rem);
+		font-weight: 700;
+		letter-spacing: -0.03em;
+		line-height: 1.35;
+	}
+
+	.experience-item__heading p {
+		margin: 0.18rem 0 0;
+		font-size: 0.83rem;
+		font-weight: 600;
+		opacity: 0.78;
+	}
+
+	.experience-item__highlights {
+		display: grid;
+		gap: 0.65rem;
+		margin: 1.1rem 0 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.experience-item__highlights li {
+		position: relative;
+		max-width: 75ch;
+		padding-left: 1rem;
+		font-size: 0.87rem;
+		line-height: 1.75;
+		opacity: 0.9;
+	}
+
+	.experience-item__highlights li::before {
+		position: absolute;
+		top: 0.72em;
+		left: 0;
+		width: 5px;
+		height: 5px;
+		border-radius: 50%;
+		background: var(--color-primary);
+		content: '';
+	}
+
+	.focus-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.42rem;
+		margin: 1.1rem 0 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.focus-tags li {
+		padding: 0.28rem 0.55rem;
+		border: 1px solid var(--color-border);
+		border-radius: 999px;
+		font-size: 0.65rem;
+		line-height: 1.4;
+		opacity: 0.88;
+	}
+
+	.education-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	.education-card {
+		display: flex;
+		min-height: 255px;
+		flex-direction: column;
+		padding: clamp(1.4rem, 3vw, 2rem);
+		border: 1px solid var(--color-border);
+		border-radius: 4px;
+		background: rgba(255, 255, 255, 0.28);
+	}
+
+	.education-card--featured {
+		border-color: var(--color-primary);
+		background: var(--color-primary);
+		color: var(--color-bg);
+	}
+
+	.education-card__meta {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 0.55rem 1rem;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid var(--color-border);
+		font-family: var(--font-mono);
+		font-size: 0.61rem;
+		letter-spacing: 0.06em;
+		line-height: 1.5;
+	}
+
+	.education-card--featured .education-card__meta {
+		border-color: rgba(242, 240, 239, 0.4);
+		opacity: 0.82;
+	}
+
+	.education-card h3 {
+		max-width: 24ch;
+		margin: 1.35rem 0 1rem;
+		font-family: var(--font-display);
+		font-size: clamp(1.55rem, 2.5vw, 2.15rem);
+		font-weight: 400;
+		letter-spacing: -0.045em;
+		line-height: 1.15;
+	}
+
+	.education-card__details {
+		margin-top: auto;
+		font-size: 0.81rem;
+		line-height: 1.6;
+		opacity: 0.85;
+	}
+
+	.education-card__details p {
+		margin: 0;
+	}
+
+	.education-card__details .education-card__note {
+		margin-top: 0.25rem;
+		font-size: 0.75rem;
+		font-style: italic;
+	}
+
+	.skills-grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 0.8rem;
+	}
+
+	.skill-group {
+		min-height: 100%;
+		padding: 1.35rem 1.25rem 1.5rem;
+		border: 1px solid var(--color-border);
+		border-radius: 4px;
+		background: rgba(255, 255, 255, 0.28);
+	}
+
+	.skill-group__heading {
+		display: flex;
+		align-items: baseline;
+		gap: 0.65rem;
+		padding-bottom: 0.8rem;
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.skill-group__heading > span {
+		font-family: var(--font-mono);
+		font-size: 0.62rem;
+		opacity: 0.68;
+	}
+
+	.skill-group__heading h3 {
+		margin: 0;
+		font-size: 0.86rem;
+		font-weight: 700;
+		letter-spacing: -0.015em;
+		line-height: 1.4;
+	}
+
+	.skill-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.42rem;
+		margin: 1rem 0 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.skill-list li {
+		padding: 0.29rem 0.5rem;
+		border: 1px solid rgba(187, 189, 188, 0.8);
+		border-radius: 999px;
+		font-size: 0.66rem;
+		line-height: 1.4;
+	}
+
+	.contact-panel {
+		display: grid;
+		grid-template-columns: minmax(0, 1.4fr) minmax(220px, 0.6fr);
+		align-items: end;
+		gap: 3rem;
+		margin: 1rem 0 clamp(3.5rem, 7vw, 6rem);
+		padding: clamp(1.7rem, 5vw, 3.5rem);
+		border-radius: 5px;
+		background: var(--color-primary);
+		color: var(--color-bg);
+	}
+
+	.section-kicker--light {
+		margin-bottom: 1.1rem;
+		opacity: 0.78;
+	}
+
+	.contact-panel h2 {
+		max-width: 13ch;
+		font-size: clamp(2.6rem, 5vw, 4.5rem);
+	}
+
+	.contact-panel__copy > p:last-child {
+		max-width: 45ch;
+		margin: 1rem 0 0;
+		font-size: 0.87rem;
+		opacity: 0.82;
+	}
+
+	.contact-panel__links {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.85rem;
+	}
+
+	.contact-panel__links > a:not(.button) {
+		color: var(--color-bg);
+		font-size: 0.79rem;
+		text-decoration-color: rgba(242, 240, 239, 0.55);
+	}
+
+	.contact-panel__links > a:not(.button):hover {
+		text-decoration-color: var(--color-bg);
+	}
+
+	.contact-panel a:focus-visible {
+		outline-color: var(--color-bg);
+	}
+
+	.site-footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem 2rem;
+		padding: 1.15rem 0 1.7rem;
+		border-top: 1px solid var(--color-border);
+		font-size: 0.68rem;
+		opacity: 0.84;
+	}
+
+	.site-footer p {
+		margin: 0;
+	}
+
+	.site-footer a {
+		font-weight: 700;
+		text-decoration: none;
+	}
+
+	.site-footer a:hover {
+		text-decoration: underline;
+	}
+
+	@media (max-width: 940px) {
+		.site-header {
+			gap: 1.1rem;
+		}
+
+		.primary-nav {
+			gap: 1rem;
+		}
+
+		.hero {
+			grid-template-columns: minmax(0, 1.3fr) minmax(255px, 0.8fr);
+			gap: 2.5rem;
+		}
+
+		.experience-item {
+			grid-template-columns: 28px minmax(125px, 0.5fr) minmax(0, 1.7fr);
+			gap: 0.9rem;
+		}
+	}
+
+	@media (max-width: 720px) {
+		.container {
+			width: min(100% - 40px, 560px);
+		}
+
+		.site-header {
+			flex-wrap: wrap;
+			row-gap: 1rem;
+			padding: 1rem 0 0.8rem;
+		}
+
+		.primary-nav {
+			order: 3;
+			width: 100%;
+			justify-content: space-between;
+			gap: 1rem;
+			padding: 0.1rem 0 0.25rem;
+		}
+
+		.hero {
+			grid-template-columns: 1fr;
+			gap: 2.6rem;
+			padding: 4.6rem 0 4rem;
+		}
+
+		.hero h1 {
+			max-width: 10ch;
+			font-size: clamp(4.2rem, 14vw, 6.5rem);
+		}
+
+		.hero-card {
+			min-height: 390px;
+		}
+
+		.section-heading {
+			grid-template-columns: 1fr;
+			gap: 1.1rem;
+			margin-bottom: 2.2rem;
+		}
+
+		.section-kicker {
+			padding-top: 0;
+		}
+
+		.experience-item {
+			grid-template-columns: 26px minmax(0, 1fr);
+			gap: 0.2rem 0.85rem;
+			padding: 1.5rem 0 1.8rem;
+		}
+
+		.experience-item__number {
+			grid-column: 1;
+			grid-row: 1 / span 2;
+		}
+
+		.experience-item__dates {
+			grid-column: 2;
+			grid-row: 1;
+			max-width: none;
+		}
+
+		.experience-item__content {
+			grid-column: 2;
+			grid-row: 2;
+		}
+
+		.education-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.education-card {
+			min-height: 225px;
+		}
+
+		.skills-grid {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		.contact-panel {
+			grid-template-columns: 1fr;
+			align-items: start;
+			gap: 2rem;
+		}
+
+		.contact-panel__links {
+			display: grid;
+			grid-template-columns: repeat(2, max-content);
+			align-items: center;
+			gap: 1rem 1.4rem;
+		}
+
+		.contact-panel__links .button {
+			grid-column: 1 / -1;
+		}
+
+		.site-footer {
+			flex-wrap: wrap;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.container {
+			width: calc(100% - 32px);
+		}
+
+		.identity__mark {
+			width: 37px;
+		}
+
+		.identity__name {
+			font-size: 0.78rem;
+		}
+
+		.identity__role {
+			font-size: 0.54rem;
+		}
+
+		.header-contact {
+			gap: 0.35rem;
+			padding: 0.55rem 0.72rem;
+			font-size: 0.7rem;
+		}
+
+		.primary-nav {
+			gap: 0.8rem;
+			overflow-x: auto;
+			scrollbar-width: none;
+		}
+
+		.primary-nav::-webkit-scrollbar {
+			display: none;
+		}
+
+		.primary-nav a {
+			flex-shrink: 0;
+			font-size: 0.7rem;
+		}
+
+		.hero {
+			padding-top: 3.7rem;
+		}
+
+		.hero h1 {
+			font-size: clamp(3.75rem, 17vw, 5rem);
+		}
+
+		.hero__actions .button {
+			flex: 1 1 100%;
+			justify-content: space-between;
+		}
+
+		.hero-card {
+			min-height: 370px;
+		}
+
+		.experience-item__highlights li {
+			font-size: 0.82rem;
+		}
+
+		.skills-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.contact-panel {
+			padding: 1.45rem;
+		}
+
+		.contact-panel__links {
+			grid-template-columns: 1fr;
+		}
+
+		.contact-panel__links .button {
+			grid-column: auto;
+		}
+
+		.site-footer {
+			align-items: flex-start;
+			flex-direction: column;
+			gap: 0.4rem;
+		}
+	}
+</style>
