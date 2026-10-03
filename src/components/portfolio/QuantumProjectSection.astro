@@ -1,29 +1,42 @@
-<section class="section quantum-section" id="quantum-project" aria-labelledby="quantum-title">
-	<div class="section-heading">
-		<p class="section-kicker"><span>03</span> / Quantum Engineering</p>
-		<div class="section-heading__copy">
-			<h2 id="quantum-title">My postgraduate capstone project.</h2>
-			<p>
+<section
+	class="border-t border-border py-[clamp(4.5rem,8vw,7rem)]"
+	id="quantum-project"
+	aria-labelledby="quantum-title"
+>
+	<div class="mb-12 grid grid-cols-[minmax(145px,0.5fr)_minmax(0,1.6fr)] gap-10 max-[720px]:mb-[2.2rem] max-[720px]:grid-cols-1 max-[720px]:gap-[1.1rem]">
+		<p class="pt-[0.45rem] font-mono text-[0.68rem] font-semibold tracking-[0.09em] uppercase leading-[1.5] opacity-[0.82] max-[720px]:pt-0">
+			<span class="mr-[0.35rem] opacity-[0.72]">03</span> / Quantum Engineering
+		</p>
+		<div>
+			<h2 class="max-w-[18ch] font-display text-[clamp(2.45rem,4.7vw,4.1rem)] font-normal tracking-[-0.06em] leading-[1.04]" id="quantum-title">
+				My postgraduate capstone project.
+			</h2>
+			<p class="mt-4 max-w-[56ch] text-[0.9rem] opacity-[0.82]">
 				I completed a postgraduate program in Quantum Engineering at UPC School (2025–2026); this dashboard was my final project.
 			</p>
 		</div>
 	</div>
 
-	<article class="quantum-project" aria-labelledby="quantum-project-title">
-		<div class="quantum-project__main">
-			<div class="quantum-project__eyebrow">
+	<article
+		class="grid grid-cols-[minmax(0,1.4fr)_minmax(250px,0.75fr)] overflow-hidden rounded-[5px] border border-primary bg-primary text-bg max-[720px]:grid-cols-1"
+		aria-labelledby="quantum-project-title"
+	>
+		<div class="p-[clamp(1.5rem,4vw,3.25rem)] max-[480px]:p-[1.4rem]">
+			<div class="flex flex-wrap justify-between gap-x-4 gap-y-2 border-b border-[rgba(242,240,239,0.4)] pb-4 font-mono text-[0.6rem] tracking-[0.09em] uppercase leading-[1.5] opacity-[0.84]">
 				<span>Postgraduate final project</span>
 				<span>2025 — 2026</span>
 			</div>
-			<h3 id="quantum-project-title">Classic-Quantum <span>Verifier Dashboard</span></h3>
-			<p>
+			<h3 class="mt-[1.8rem] mb-[1.15rem] max-w-[18ch] font-display text-[clamp(2.4rem,4.2vw,3.8rem)] font-normal tracking-[-0.065em] leading-[1.02] max-[480px]:text-[clamp(2.1rem,10vw,3rem)]" id="quantum-project-title">
+				Classic-Quantum <span class="block italic">Verifier Dashboard</span>
+			</h3>
+			<p class="my-3 max-w-[65ch] text-[0.86rem] leading-[1.8] opacity-90">
 				An interactive dashboard for exploring and running the one-qubit quantum verification protocol described in “Towards experimental classical verification of quantum computation” by Roman Stricker et al. (2024).
 			</p>
-			<p>
+			<p class="my-3 max-w-[65ch] text-[0.86rem] leading-[1.8] opacity-90">
 				Users can prepare a parameterized clock state, measure its Hamiltonian energy, and see in real time whether the verifier accepts or rejects the prover. The protocol lets a classical verifier test for genuine quantum behavior without simulating the full computation.
 			</p>
 			<a
-				class="button button--primary quantum-project__link"
+				class="mt-4 inline-flex min-h-[46px] items-center justify-center gap-[0.8rem] rounded-full border border-accent bg-accent px-[1.05rem] py-[0.72rem] text-[0.77rem] font-bold no-underline transition-[background-color,color,transform,box-shadow] duration-[180ms] hover:-translate-y-0.5 hover:bg-bg hover:text-primary hover:shadow-[0_7px_18px_rgba(36,95,115,0.13)]"
 				href="https://github.com/feymery/classic-quantum-verifier-dashboard"
 				target="_blank"
 				rel="noreferrer"
@@ -32,36 +45,39 @@
 			</a>
 		</div>
 
-		<aside class="quantum-project__sidebar" aria-label="Project overview">
+		<aside
+			class="flex flex-col justify-between gap-8 border-l border-[rgba(242,240,239,0.4)] bg-[rgba(242,240,239,0.04)] p-[clamp(1.5rem,3vw,2.4rem)] max-[720px]:grid max-[720px]:grid-cols-2 max-[720px]:content-start max-[720px]:gap-6 max-[720px]:border-t max-[720px]:border-t-[rgba(242,240,239,0.4)] max-[720px]:border-l-0 max-[480px]:grid-cols-1 max-[480px]:p-[1.4rem]"
+			aria-label="Project overview"
+		>
 			<div>
-				<p class="quantum-project__label">Protocol flow</p>
-				<ol class="quantum-project__steps">
-					<li>
-						<span>01</span>
-						<p><strong>Prepare</strong> a parameterized clock state.</p>
+				<p class="mb-4 font-mono text-[0.6rem] tracking-[0.1em] uppercase opacity-[0.78]">Protocol flow</p>
+				<ol class="grid gap-[0.9rem]">
+					<li class="grid grid-cols-[25px_minmax(0,1fr)] items-start gap-[0.7rem]">
+						<span class="grid size-6 place-items-center rounded-full border border-[rgba(242,240,239,0.48)] font-mono text-[0.55rem]">01</span>
+						<p class="text-[0.76rem] leading-[1.6] opacity-[0.86]"><strong class="font-bold text-bg opacity-100">Prepare</strong> a parameterized clock state.</p>
 					</li>
-					<li>
-						<span>02</span>
-						<p><strong>Measure</strong> the Hamiltonian energy.</p>
+					<li class="grid grid-cols-[25px_minmax(0,1fr)] items-start gap-[0.7rem]">
+						<span class="grid size-6 place-items-center rounded-full border border-[rgba(242,240,239,0.48)] font-mono text-[0.55rem]">02</span>
+						<p class="text-[0.76rem] leading-[1.6] opacity-[0.86]"><strong class="font-bold text-bg opacity-100">Measure</strong> the Hamiltonian energy.</p>
 					</li>
-					<li>
-						<span>03</span>
-						<p><strong>Verify</strong> the prover against the threshold.</p>
+					<li class="grid grid-cols-[25px_minmax(0,1fr)] items-start gap-[0.7rem]">
+						<span class="grid size-6 place-items-center rounded-full border border-[rgba(242,240,239,0.48)] font-mono text-[0.55rem]">03</span>
+						<p class="text-[0.76rem] leading-[1.6] opacity-[0.86]"><strong class="font-bold text-bg opacity-100">Verify</strong> the prover against the threshold.</p>
 					</li>
 				</ol>
 			</div>
 
-			<div class="quantum-project__stack">
-				<p class="quantum-project__label">Technology</p>
-				<ul>
-					<li>React 19</li>
-					<li>TypeScript</li>
-					<li>Vite</li>
-					<li>Tailwind CSS v4</li>
-					<li>FastAPI</li>
-					<li>Qiskit Aer · local</li>
-					<li>IBM Quantum Runtime · optional</li>
-					<li>Recharts</li>
+			<div class="mt-8 border-t border-[rgba(242,240,239,0.4)] pt-[1.2rem] max-[720px]:mt-0">
+				<p class="mb-4 font-mono text-[0.6rem] tracking-[0.1em] uppercase opacity-[0.78]">Technology</p>
+				<ul class="flex flex-wrap gap-[0.42rem]">
+					<li class="rounded-full border border-[rgba(242,240,239,0.42)] px-2 py-[0.28rem] text-[0.64rem] leading-[1.4]">React 19</li>
+					<li class="rounded-full border border-[rgba(242,240,239,0.42)] px-2 py-[0.28rem] text-[0.64rem] leading-[1.4]">TypeScript</li>
+					<li class="rounded-full border border-[rgba(242,240,239,0.42)] px-2 py-[0.28rem] text-[0.64rem] leading-[1.4]">Vite</li>
+					<li class="rounded-full border border-[rgba(242,240,239,0.42)] px-2 py-[0.28rem] text-[0.64rem] leading-[1.4]">Tailwind CSS v4</li>
+					<li class="rounded-full border border-[rgba(242,240,239,0.42)] px-2 py-[0.28rem] text-[0.64rem] leading-[1.4]">FastAPI</li>
+					<li class="rounded-full border border-[rgba(242,240,239,0.42)] px-2 py-[0.28rem] text-[0.64rem] leading-[1.4]">Qiskit Aer · local</li>
+					<li class="rounded-full border border-[rgba(242,240,239,0.42)] px-2 py-[0.28rem] text-[0.64rem] leading-[1.4]">IBM Quantum Runtime · optional</li>
+					<li class="rounded-full border border-[rgba(242,240,239,0.42)] px-2 py-[0.28rem] text-[0.64rem] leading-[1.4]">Recharts</li>
 				</ul>
 			</div>
 		</aside>

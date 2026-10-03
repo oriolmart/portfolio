@@ -1,41 +1,76 @@
-<section class="hero" id="about" aria-labelledby="hero-title">
-	<div class="hero__copy">
-		<p class="eyebrow">Software Engineer <span aria-hidden="true">/</span> Barcelona, Spain</p>
-		<h1 id="hero-title">Oriol Martín <span>Olivé</span></h1>
-		<p class="hero__statement">Turning complex engineering challenges into reliable software.</p>
-		<p class="hero__summary">
+<section
+	class="grid grid-cols-[minmax(0,1.5fr)_minmax(285px,0.78fr)] items-center gap-[clamp(3rem,7vw,6.5rem)] pt-[clamp(5.25rem,10vw,8rem)] pb-[clamp(4rem,8vw,6.75rem)] max-[940px]:grid-cols-[minmax(0,1.3fr)_minmax(255px,0.8fr)] max-[940px]:gap-10 max-[720px]:grid-cols-1 max-[720px]:gap-[2.6rem] max-[720px]:pt-[4.6rem] max-[720px]:pb-16 max-[480px]:pt-[3.7rem]"
+	id="about"
+	aria-labelledby="hero-title"
+>
+	<div>
+		<p
+			class="mb-[1.4rem] flex items-center gap-[0.65rem] font-mono text-[0.68rem] font-semibold tracking-[0.09em] uppercase leading-[1.5] opacity-[0.82] before:h-px before:w-7 before:bg-primary before:content-['']"
+		>
+			Software Engineer <span aria-hidden="true">/</span> Barcelona, Spain
+		</p>
+		<h1
+			class="max-w-[9ch] font-display text-[clamp(4rem,7.7vw,6.9rem)] font-normal tracking-[-0.075em] leading-[0.94] max-[720px]:max-w-[10ch] max-[720px]:text-[clamp(4.2rem,14vw,6.5rem)] max-[480px]:text-[clamp(3.75rem,17vw,5rem)]"
+			id="hero-title"
+		>
+			Oriol Martín <span class="block italic">Olivé</span>
+		</h1>
+		<p class="mt-[1.6rem] mb-[0.8rem] max-w-[34ch] text-[clamp(1.18rem,2vw,1.45rem)] font-semibold tracking-[-0.025em] leading-[1.35]">
+			Turning complex engineering challenges into reliable software.
+		</p>
+		<p class="max-w-[65ch] text-[0.91rem] leading-[1.85] opacity-[0.88]">
 			Software Engineer with four years of experience building scalable web applications and production-grade Generative AI (RAG) systems. I combine a strong foundation in software and quantum engineering from UPC with hands-on delivery across modern React/TypeScript ecosystems and Python backends. Grounded in algorithmic problem-solving, clean architecture, and well-founded design patterns, I build resilient, high-performance production software.
 		</p>
-		<div class="hero__actions">
-			<a class="button button--primary" href="mailto:martin.oriol.olive@gmail.com">
+		<div class="mt-[1.8rem] flex flex-wrap gap-3">
+			<a
+				class="inline-flex min-h-[46px] items-center justify-center gap-[0.8rem] rounded-full border border-accent bg-accent px-[1.05rem] py-[0.72rem] text-[0.77rem] font-bold no-underline transition-[background-color,color,transform,box-shadow] duration-[180ms] hover:-translate-y-0.5 hover:bg-transparent hover:text-accent hover:shadow-[0_7px_18px_rgba(36,95,115,0.13)] max-[480px]:flex-[1_1_100%] max-[480px]:justify-between"
+				href="mailto:martin.oriol.olive@gmail.com"
+			>
 				Contact me <span aria-hidden="true">↗</span>
 			</a>
 			<a
-				class="button button--outline"
+				class="inline-flex min-h-[46px] items-center justify-center gap-[0.8rem] rounded-full border border-accent bg-transparent px-[1.05rem] py-[0.72rem] text-[0.77rem] font-bold no-underline transition-[background-color,color,transform,box-shadow] duration-[180ms] hover:-translate-y-0.5 hover:bg-accent hover:text-bg hover:shadow-[0_7px_18px_rgba(36,95,115,0.13)] max-[480px]:flex-[1_1_100%] max-[480px]:justify-between"
 				href="https://www.linkedin.com/in/oriol-martin-olive/"
 				target="_blank"
 				rel="noreferrer"
 			>
 				LinkedIn profile <span aria-hidden="true">↗</span>
 			</a>
-			<details class="cv-download">
-				<summary class="button button--outline">
-					Download CV <span class="cv-download__chevron" aria-hidden="true">↓</span>
+			<details class="group relative max-[480px]:flex-[1_1_100%]">
+				<summary
+					class="inline-flex min-h-[46px] cursor-pointer list-none items-center justify-center gap-[0.8rem] rounded-full border border-accent bg-transparent px-[1.05rem] py-[0.72rem] text-[0.77rem] font-bold no-underline transition-[background-color,color,transform,box-shadow] duration-[180ms] hover:-translate-y-0.5 hover:bg-accent hover:text-bg hover:shadow-[0_7px_18px_rgba(36,95,115,0.13)] [&::-webkit-details-marker]:hidden max-[480px]:w-full max-[480px]:justify-between"
+				>
+					Download CV <span class="inline-block transition-transform duration-[180ms] group-open:rotate-180" aria-hidden="true">↓</span>
 				</summary>
-				<ul class="cv-download__menu" aria-label="Choose a CV language">
+				<ul
+					class="absolute left-0 top-[calc(100%_+_0.55rem)] z-[5] w-[min(260px,calc(100vw_-_2rem))] rounded-md border border-border bg-bg p-[0.35rem] shadow-[0_12px_30px_rgba(36,95,115,0.12)]"
+					aria-label="Choose a CV language"
+				>
 					<li>
-						<a href="/english_cv.pdf" download="Oriol-Martin-Olive-CV-English.pdf">
-							<span>English</span><span class="cv-download__format">PDF ↓</span>
+						<a
+							class="flex items-center justify-between gap-4 rounded p-[0.7rem_0.75rem] text-[0.77rem] font-[650] no-underline transition-colors duration-[160ms] hover:bg-[rgba(115,62,36,0.08)]"
+							href="/english_cv.pdf"
+							download="Oriol-Martin-Olive-CV-English.pdf"
+						>
+							<span>English</span><span class="font-mono text-[0.59rem] tracking-[0.04em] opacity-[0.78]">PDF ↓</span>
 						</a>
 					</li>
 					<li>
-						<a href="/spanish_cv.pdf" download="Oriol-Martin-Olive-CV-Spanish.pdf">
-							<span>Spanish</span><span class="cv-download__format">PDF ↓</span>
+						<a
+							class="flex items-center justify-between gap-4 rounded p-[0.7rem_0.75rem] text-[0.77rem] font-[650] no-underline transition-colors duration-[160ms] hover:bg-[rgba(115,62,36,0.08)]"
+							href="/spanish_cv.pdf"
+							download="Oriol-Martin-Olive-CV-Spanish.pdf"
+						>
+							<span>Spanish</span><span class="font-mono text-[0.59rem] tracking-[0.04em] opacity-[0.78]">PDF ↓</span>
 						</a>
 					</li>
 					<li>
-						<a href="/catalan_cv.pdf" download="Oriol-Martin-Olive-CV-Catalan.pdf">
-							<span>Catalan</span><span class="cv-download__format">PDF ↓</span>
+						<a
+							class="flex items-center justify-between gap-4 rounded p-[0.7rem_0.75rem] text-[0.77rem] font-[650] no-underline transition-colors duration-[160ms] hover:bg-[rgba(115,62,36,0.08)]"
+							href="/catalan_cv.pdf"
+							download="Oriol-Martin-Olive-CV-Catalan.pdf"
+						>
+							<span>Catalan</span><span class="font-mono text-[0.59rem] tracking-[0.04em] opacity-[0.78]">PDF ↓</span>
 						</a>
 					</li>
 				</ul>
@@ -43,29 +78,32 @@
 		</div>
 	</div>
 
-	<aside class="hero-card" aria-label="Portrait and professional highlights">
+	<aside
+		class="relative flex min-h-[460px] flex-col overflow-hidden rounded-[5px] border border-primary bg-primary p-[clamp(1.5rem,3.4vw,2.2rem)] text-bg before:pointer-events-none before:absolute before:inset-0 before:z-[1] before:bg-[linear-gradient(180deg,rgba(36,95,115,0.1)_0%,rgba(36,95,115,0.14)_28%,rgba(36,95,115,0.84)_48%,var(--color-primary)_72%)] before:content-[''] after:pointer-events-none after:absolute after:inset-3 after:z-[2] after:rounded-[2px] after:border after:border-[rgba(242,240,239,0.42)] after:content-[''] max-[720px]:h-[clamp(440px,95vw,540px)] max-[720px]:min-h-0 max-[480px]:h-[clamp(440px,95vw,500px)]"
+		aria-label="Portrait and professional highlights"
+	>
 		<img
-			class="hero-card__portrait"
+			class="absolute inset-0 z-0 size-full object-cover object-[center_18%]"
 			src="/profile_photo.jpg"
 			alt="Portrait of Oriol Martín Olivé"
 			fetchpriority="high"
 			decoding="async"
 		/>
-		<div class="hero-card__topline">
+		<div class="relative z-[3] flex items-center justify-between gap-4 rounded-[3px] border border-[rgba(242,240,239,0.38)] bg-[rgba(36,95,115,0.9)] px-[0.7rem] py-[0.55rem] font-mono text-[0.59rem] tracking-[0.1em] uppercase">
 			<span>At a glance</span>
 			<span>Barcelona · ES</span>
 		</div>
-		<div class="hero-card__details">
-			<div class="hero-card__stat-block">
-				<p class="hero-card__stat">4<span> years</span></p>
-				<p class="hero-card__caption">building production software</p>
+		<div class="relative z-[3] mt-auto">
+			<div class="mb-4">
+				<p class="font-display text-[clamp(4.6rem,7vw,6rem)] tracking-[-0.1em] leading-[0.9]">4<span class="font-body text-base font-medium tracking-normal"> years</span></p>
+				<p class="mt-[0.45rem] text-[0.83rem] opacity-[0.92]">building production software</p>
 			</div>
-			<div class="hero-card__focus">
-				<p class="hero-card__label">Areas of focus</p>
-				<ul>
-					<li><span>01</span> Applied AI &amp; RAG</li>
-					<li><span>02</span> Full-stack products</li>
-					<li><span>03</span> Security &amp; quantum technology</li>
+			<div class="border-t border-[rgba(242,240,239,0.5)] pt-[0.9rem]">
+				<p class="mb-[0.7rem] font-mono text-[0.59rem] tracking-[0.11em] uppercase opacity-90">Areas of focus</p>
+				<ul class="grid gap-[0.42rem]">
+					<li class="flex gap-3 text-[0.78rem]"><span class="font-mono text-[0.63rem] opacity-[0.65]">01</span> Applied AI &amp; RAG</li>
+					<li class="flex gap-3 text-[0.78rem]"><span class="font-mono text-[0.63rem] opacity-[0.65]">02</span> Full-stack products</li>
+					<li class="flex gap-3 text-[0.78rem]"><span class="font-mono text-[0.63rem] opacity-[0.65]">03</span> Security &amp; quantum technology</li>
 				</ul>
 			</div>
 		</div>

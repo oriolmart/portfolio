@@ -8,30 +8,48 @@ interface Props {
 const { experiences } = Astro.props;
 ---
 
-<section class="section experience-section" id="experience" aria-labelledby="experience-title">
-	<div class="section-heading">
-		<p class="section-kicker"><span>01</span> / Experience</p>
-		<div class="section-heading__copy">
-			<h2 id="experience-title">Built for the real world.</h2>
-			<p>Production-oriented work across applied AI, security tooling, and digital identity.</p>
+<section
+	class="border-t border-border py-[clamp(4.5rem,8vw,7rem)]"
+	id="experience"
+	aria-labelledby="experience-title"
+>
+	<div class="mb-12 grid grid-cols-[minmax(145px,0.5fr)_minmax(0,1.6fr)] gap-10 max-[720px]:mb-[2.2rem] max-[720px]:grid-cols-1 max-[720px]:gap-[1.1rem]">
+		<p class="pt-[0.45rem] font-mono text-[0.68rem] font-semibold tracking-[0.09em] uppercase leading-[1.5] opacity-[0.82] max-[720px]:pt-0">
+			<span class="mr-[0.35rem] opacity-[0.72]">01</span> / Experience
+		</p>
+		<div>
+			<h2 class="max-w-[18ch] font-display text-[clamp(2.45rem,4.7vw,4.1rem)] font-normal tracking-[-0.06em] leading-[1.04]" id="experience-title">
+				Built for the real world.
+			</h2>
+			<p class="mt-4 max-w-[56ch] text-[0.9rem] opacity-[0.82]">
+				Production-oriented work across applied AI, security tooling, and digital identity.
+			</p>
 		</div>
 	</div>
 
-	<div class="experience-list">
+	<div class="border-t border-border">
 		{experiences.map((experience) => (
-			<article class="experience-item">
-				<p class="experience-item__number">{experience.number}</p>
-				<p class="experience-item__dates">{experience.dates}</p>
-				<div class="experience-item__content">
-					<div class="experience-item__heading">
-						<h3>{experience.role}</h3>
-						<p>{experience.company}</p>
+			<article class="grid grid-cols-[34px_minmax(145px,0.48fr)_minmax(0,1.75fr)] gap-5 border-b border-border pt-8 pb-[2.2rem] max-[940px]:grid-cols-[28px_minmax(125px,0.5fr)_minmax(0,1.7fr)] max-[940px]:gap-[0.9rem] max-[720px]:grid-cols-[26px_minmax(0,1fr)] max-[720px]:gap-x-[0.85rem] max-[720px]:gap-y-[0.2rem] max-[720px]:pt-6 max-[720px]:pb-[1.8rem]">
+				<p class="font-mono text-[0.67rem] leading-[1.65] opacity-[0.68] max-[720px]:col-start-1 max-[720px]:row-[1_/_span_2]">{experience.number}</p>
+				<p class="max-w-[14ch] font-mono text-[0.67rem] leading-[1.65] opacity-[0.78] max-[720px]:max-w-none max-[720px]:col-start-2 max-[720px]:row-start-1">{experience.dates}</p>
+				<div class="max-w-[760px] max-[720px]:col-start-2 max-[720px]:row-start-2">
+					<div>
+						<h3 class="text-[clamp(1.08rem,1.7vw,1.35rem)] font-bold tracking-[-0.03em] leading-[1.35]">{experience.role}</h3>
+						<p class="mt-[0.18rem] text-[0.83rem] font-semibold opacity-[0.78]">{experience.company}</p>
 					</div>
-					<ul class="experience-item__highlights">
-						{experience.highlights.map((highlight) => <li>{highlight}</li>)}
+					<ul class="mt-[1.1rem] grid gap-[0.65rem]">
+						{experience.highlights.map((highlight) => (
+							<li class="relative max-w-[75ch] pl-4 text-[0.87rem] leading-[1.75] opacity-90 before:absolute before:left-0 before:top-[0.72em] before:size-[5px] before:rounded-full before:bg-primary before:content-[''] max-[480px]:text-[0.82rem]">
+								{highlight}
+							</li>
+						))}
 					</ul>
-					<ul class="focus-tags" aria-label="Areas of focus">
-						{experience.focus.map((item) => <li>{item}</li>)}
+					<ul class="mt-[1.1rem] flex flex-wrap gap-[0.42rem]" aria-label="Areas of focus">
+						{experience.focus.map((item) => (
+							<li class="rounded-full border border-border px-[0.55rem] py-[0.28rem] text-[0.65rem] leading-[1.4] opacity-[0.88]">
+								{item}
+							</li>
+						))}
 					</ul>
 				</div>
 			</article>

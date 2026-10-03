@@ -8,26 +8,50 @@ interface Props {
 const { education } = Astro.props;
 ---
 
-<section class="section education-section" id="education" aria-labelledby="education-title">
-	<div class="section-heading">
-		<p class="section-kicker"><span>02</span> / Education</p>
-		<div class="section-heading__copy">
-			<h2 id="education-title">A foundation in software and quantum engineering.</h2>
-			<p>Academic training at UPC, from software engineering to quantum technologies.</p>
+<section
+	class="border-t border-border py-[clamp(4.5rem,8vw,7rem)]"
+	id="education"
+	aria-labelledby="education-title"
+>
+	<div class="mb-12 grid grid-cols-[minmax(145px,0.5fr)_minmax(0,1.6fr)] gap-10 max-[720px]:mb-[2.2rem] max-[720px]:grid-cols-1 max-[720px]:gap-[1.1rem]">
+		<p class="pt-[0.45rem] font-mono text-[0.68rem] font-semibold tracking-[0.09em] uppercase leading-[1.5] opacity-[0.82] max-[720px]:pt-0">
+			<span class="mr-[0.35rem] opacity-[0.72]">02</span> / Education
+		</p>
+		<div>
+			<h2 class="max-w-[18ch] font-display text-[clamp(2.45rem,4.7vw,4.1rem)] font-normal tracking-[-0.06em] leading-[1.04]" id="education-title">
+				A foundation in software and quantum engineering.
+			</h2>
+			<p class="mt-4 max-w-[56ch] text-[0.9rem] opacity-[0.82]">
+				Academic training at UPC, from software engineering to quantum technologies.
+			</p>
 		</div>
 	</div>
 
-	<div class="education-grid">
+	<div class="grid grid-cols-2 gap-4 max-[720px]:grid-cols-1">
 		{education.map((item, index) => (
-			<article class:list={['education-card', { 'education-card--featured': index === 0 }]}>
-				<div class="education-card__meta">
+			<article
+				class:list={[
+					'flex min-h-[255px] flex-col rounded border p-[clamp(1.4rem,3vw,2rem)] max-[720px]:min-h-[225px]',
+					index === 0
+						? 'border-primary bg-primary text-bg'
+						: 'border-border bg-[rgba(255,255,255,0.28)]',
+				]}
+			>
+				<div
+					class:list={[
+						'flex flex-wrap justify-between gap-x-4 gap-y-[0.55rem] border-b pb-4 font-mono text-[0.61rem] tracking-[0.06em] leading-[1.5]',
+						index === 0 ? 'border-[rgba(242,240,239,0.4)] opacity-[0.82]' : 'border-border',
+					]}
+				>
 					<span>{item.level}</span>
 					<span>{item.dates}</span>
 				</div>
-				<h3>{item.degree}</h3>
-				<div class="education-card__details">
+				<h3 class="mt-[1.35rem] mb-4 max-w-[24ch] font-display text-[clamp(1.55rem,2.5vw,2.15rem)] font-normal tracking-[-0.045em] leading-[1.15]">
+					{item.degree}
+				</h3>
+				<div class="mt-auto text-[0.81rem] leading-[1.6] opacity-[0.85]">
 					<p>{item.institution}</p>
-					{item.note && <p class="education-card__note">{item.note}</p>}
+					{item.note && <p class="mt-1 text-xs italic">{item.note}</p>}
 				</div>
 			</article>
 		))}

@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import '../styles/portfolio.css';
 import ContactSection from '../components/portfolio/ContactSection.astro';
 import EducationSection from '../components/portfolio/EducationSection.astro';
 import ExperienceSection from '../components/portfolio/ExperienceSection.astro';
@@ -16,8 +15,8 @@ import { education, experiences, skillGroups } from '../data/portfolio';
 	title="Oriol Martín Olivé — Software Engineer"
 	description="Software Engineer in Barcelona with four years of experience building scalable web applications and production-grade Generative AI systems."
 >
-	<div class="portfolio-shell" id="top">
-		<div class="container">
+	<div class="min-h-screen overflow-clip" id="top">
+		<div class="mx-auto w-[calc(100%_-_64px)] max-w-[1160px] max-[720px]:w-[calc(100%_-_40px)] max-[720px]:max-w-[560px] max-[480px]:w-[calc(100%_-_32px)]">
 			<PortfolioHeader />
 			<main id="main">
 				<HeroSection />
