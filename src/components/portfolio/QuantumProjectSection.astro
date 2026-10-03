@@ -1,0 +1,69 @@
+<section class="section quantum-section" id="quantum-project" aria-labelledby="quantum-title">
+	<div class="section-heading">
+		<p class="section-kicker"><span>03</span> / Quantum Engineering</p>
+		<div class="section-heading__copy">
+			<h2 id="quantum-title">My postgraduate capstone project.</h2>
+			<p>
+				I completed a postgraduate program in Quantum Engineering at UPC School (2025–2026); this dashboard was my final project.
+			</p>
+		</div>
+	</div>
+
+	<article class="quantum-project" aria-labelledby="quantum-project-title">
+		<div class="quantum-project__main">
+			<div class="quantum-project__eyebrow">
+				<span>Postgraduate final project</span>
+				<span>2025 — 2026</span>
+			</div>
+			<h3 id="quantum-project-title">Classic-Quantum <span>Verifier Dashboard</span></h3>
+			<p>
+				An interactive dashboard for exploring and running the one-qubit quantum verification protocol described in “Towards experimental classical verification of quantum computation” by Roman Stricker et al. (2024).
+			</p>
+			<p>
+				Users can prepare a parameterized clock state, measure its Hamiltonian energy, and see in real time whether the verifier accepts or rejects the prover. The protocol lets a classical verifier test for genuine quantum behavior without simulating the full computation.
+			</p>
+			<a
+				class="button button--primary quantum-project__link"
+				href="https://github.com/feymery/classic-quantum-verifier-dashboard"
+				target="_blank"
+				rel="noreferrer"
+			>
+				View project on GitHub <span aria-hidden="true">↗</span>
+			</a>
+		</div>
+
+		<aside class="quantum-project__sidebar" aria-label="Project overview">
+			<div>
+				<p class="quantum-project__label">Protocol flow</p>
+				<ol class="quantum-project__steps">
+					<li>
+						<span>01</span>
+						<p><strong>Prepare</strong> a parameterized clock state.</p>
+					</li>
+					<li>
+						<span>02</span>
+						<p><strong>Measure</strong> the Hamiltonian energy.</p>
+					</li>
+					<li>
+						<span>03</span>
+						<p><strong>Verify</strong> the prover against the threshold.</p>
+					</li>
+				</ol>
+			</div>
+
+			<div class="quantum-project__stack">
+				<p class="quantum-project__label">Technology</p>
+				<ul>
+					<li>React 19</li>
+					<li>TypeScript</li>
+					<li>Vite</li>
+					<li>Tailwind CSS v4</li>
+					<li>FastAPI</li>
+					<li>Qiskit Aer · local</li>
+					<li>IBM Quantum Runtime · optional</li>
+					<li>Recharts</li>
+				</ul>
+			</div>
+		</aside>
+	</article>
+</section>

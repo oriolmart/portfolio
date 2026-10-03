@@ -1,0 +1,33 @@
+---
+import type { SkillGroup } from '../../data/portfolio';
+
+interface Props {
+	skillGroups: SkillGroup[];
+}
+
+const { skillGroups } = Astro.props;
+---
+
+<section class="section skills-section" id="skills" aria-labelledby="skills-title">
+	<div class="section-heading">
+		<p class="section-kicker"><span>04</span> / Skills</p>
+		<div class="section-heading__copy">
+			<h2 id="skills-title">Tools for thoughtful engineering.</h2>
+			<p>Technologies, practices, and languages I bring to product development.</p>
+		</div>
+	</div>
+
+	<div class="skills-grid">
+		{skillGroups.map((group) => (
+			<article class="skill-group">
+				<div class="skill-group__heading">
+					<span>{group.number}</span>
+					<h3>{group.title}</h3>
+				</div>
+				<ul class="skill-list">
+					{group.items.map((item) => <li>{item}</li>)}
+				</ul>
+			</article>
+		))}
+	</div>
+</section>

@@ -1,0 +1,40 @@
+---
+import type { Experience } from '../../data/portfolio';
+
+interface Props {
+	experiences: Experience[];
+}
+
+const { experiences } = Astro.props;
+---
+
+<section class="section experience-section" id="experience" aria-labelledby="experience-title">
+	<div class="section-heading">
+		<p class="section-kicker"><span>01</span> / Experience</p>
+		<div class="section-heading__copy">
+			<h2 id="experience-title">Built for the real world.</h2>
+			<p>Production-oriented work across applied AI, security tooling, and digital identity.</p>
+		</div>
+	</div>
+
+	<div class="experience-list">
+		{experiences.map((experience) => (
+			<article class="experience-item">
+				<p class="experience-item__number">{experience.number}</p>
+				<p class="experience-item__dates">{experience.dates}</p>
+				<div class="experience-item__content">
+					<div class="experience-item__heading">
+						<h3>{experience.role}</h3>
+						<p>{experience.company}</p>
+					</div>
+					<ul class="experience-item__highlights">
+						{experience.highlights.map((highlight) => <li>{highlight}</li>)}
+					</ul>
+					<ul class="focus-tags" aria-label="Areas of focus">
+						{experience.focus.map((item) => <li>{item}</li>)}
+					</ul>
+				</div>
+			</article>
+		))}
+	</div>
+</section>
